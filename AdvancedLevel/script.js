@@ -1,6 +1,6 @@
 start = false
 
-i = 60
+i = 120
 
 botton_text = ["Start", "Stop"]
 
@@ -12,13 +12,17 @@ document.getElementById("startbutton").onclick = function (){
 function timer() {
   if (start) {
     document.getElementById("p1").innerHTML=i;
-    if (i == 0) i = 60;
-    i = i - 1;
-    console.log(i)
+    if (i == 0) {
+    	start = !start;
+    }
+    else i = i - 1;
   }
   else {
-    i = 60
-    document.getElementById("p1").innerHTML="";
+    if (i == 0) {
+    	document.getElementById("p1").innerHTML="End";
+    	document.getElementById("startbutton").hidden = true;
+    }
+    else document.getElementById("p1").innerHTML="";
   }
 }
 
