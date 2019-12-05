@@ -2,7 +2,7 @@ start = false
 
 i = 120
 
-botton_text = ["Start", "Stop"]
+botton_text = ["Start", "Pause"]
 
 document.getElementById("startbutton").onclick = function (){
   start = !start
@@ -22,7 +22,6 @@ function timer() {
     	document.getElementById("p1").innerHTML="End";
     	document.getElementById("startbutton").hidden = true;
     }
-    else document.getElementById("p1").innerHTML="";
   }
 }
 
