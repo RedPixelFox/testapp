@@ -1,9 +1,23 @@
+start = false
+
 i = 60
 
-function timer() {
-  document.getElementById("p1").innerHTML=i;
-  if (i == 0) i = 60;
-  i = i - 1;
+botton_text = ["Start", "Stop"]
+
+document.getElementById("startbutton").onclick = function (){
+  start = !start
+  document.getElementById("startbutton").value = botton_text[+start]
 }
 
-setInterval(() => timer(), 1000)
+function timer() {
+  if (start) {
+    document.getElementById("p1").innerHTML=i;
+    if (i == 0) i = 60;
+    i = i - 1;
+    console.log(i)
+  }
+  else {
+    i = 60
+    document.getElementById("p1").innerHTML="";
+  }
+}
