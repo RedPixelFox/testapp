@@ -21,3 +21,5 @@ function timer() {
     document.getElementById("p1").innerHTML="";
   }
 }
+
+setInterval(() => timer(), 1000)
