@@ -21,6 +21,7 @@ function timer() {
     if (i == 0) {
     	document.getElementById("p1").innerHTML="End";
     	document.getElementById("startbutton").hidden = true;
+        setInterval(() => location.reload(), 3000);
     }
   }
 }
